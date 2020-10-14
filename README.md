@@ -25,6 +25,27 @@ Repository tasarım desenini kullandım. Projelerimde sürekli katmanlı mimari 
 * BLL: Bilindiği gibi her türlü iş, eylem, fiiliyat, algoritma, istatistik vs. yani operasyonel tüm işlevleri kapsayan katmandır.
 * API: WEB API katmanıdır.
 
+## CodeFirst ile DataBase oluşturma
+
+* MSSQL de MakaleDB adında yeni DataBase oluşturalım.
+* Package Manager Console Açalım
+1. Adım Migration oluşturma
+
+```c#
+PM> enable-migrations
+```
+2. Adım Database güncelleme
+
+```c#
+PM> update-database
+
+//Başarılı bir ekran çıktısı
+//No pending explicit migrations.
+//Applying automatic migration: 202010131138000_AutomaticMigration.
+//Running Seed method.
+```
+
+
 ## Projeye neler eklemek isterdim?
 
 * Başlangıç seviyesi bir API yazdım bu yüzden ilk ekleyeceğim şey "Token" yapısı olurdu.
@@ -39,4 +60,3 @@ Repository tasarım desenini kullandım. Projelerimde sürekli katmanlı mimari 
 * Repository Pattern (5 Yıl)
 * Katmanlı Mimari (5 Yıl)
 * Code First (5 Yıl)
-
