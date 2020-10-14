@@ -1,29 +1,31 @@
-# Foobar
+# Makale Projesi
 
-Foobar is a Python library for dealing with word pluralization.
+Makale adında API projemiz var. Bu API üzerinden makale listeleme, arama, ekleme, güncelleme ve silme işlemlerinin REST çağrıları ile yapılması.
 
-## Installation
+## Kullanılan Teknolojiler ve Yapılar
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+* .Net Framework
+* ASP.NET Web API
+* Entity Framework
+* MSSQL
+* Repository Pattern
+* Katmanlı Mimari
+* Code First
 
-```bash
-pip install foobar
-```
 
-## Usage
+## Projede kullanılan tasarım deseni
 
-```python
-import foobar
+Repository tasarım desenini kullandım. Projelerimde sürekli katmanlı mimari ile geliştirmeler yaptığımdan ve Entity Framework teknolojisinden yararlandığımdan dolayı Repository tasarımı bu yapıya uygun olduğunu düşünüyorum, sebebi ise veri işlemleri için bir interface tanımlayıp ve bu interface generic bir yapıya sahip olduğundan birbirinden farklı nesneleri alıp veri işlemlerini hızlıca yapmamızı ve sürekli kod yazmamızı engellemiş oluyoruz. 
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+## Proje Katmanları
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+* ENTITY: DAL katmanıyla yüksek oranda ilişkisel nesneleri barındıracak olan Entities katmanı içerisinde uygulamada kullanılacak tüm entity yapılanlarını barındırmaktadır.
+* DAL(Data Access Layer): Veritabanı(context) nesnesi ve migration vs. gibi yapılanmaların bulunduğu katmandır.
+* MAPPER: ENTITY katmanında bulunan nesnelerin ilişkileri ve niteliklerinin belirtildiği karmandır.
+* BLL: Bilindiği gibi her türlü iş, eylem, fiiliyat, algoritma, istatistik vs. yani operasyonel tüm işlevleri kapsayan katmandır.
+* API: WEB API katmanıdır.
 
-Please make sure to update tests as appropriate.
+## Projeye neler eklemek isterdim?
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+* Başlangıç seviyesi bir API yazdım bu yüzden ilk ekleyeceğim şey "Token" yapısı olurdu.
+* User adında bir tablo oluşturup, token ile ilişkilendirip ardından Authentication kontrolleri yapardım.
