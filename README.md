@@ -29,3 +29,14 @@ Repository tasarım desenini kullandım. Projelerimde sürekli katmanlı mimari 
 
 * Başlangıç seviyesi bir API yazdım bu yüzden ilk ekleyeceğim şey "Token" yapısı olurdu.
 * User adında bir tablo oluşturup, token ile ilişkilendirip ardından Authentication kontrolleri yapardım.
+
+## Teknoloji ve Kütüphaneler hakkında tecrübelerim
+
+* .Net Framework (6 Yıl)
+* ASP.NET Web API (5 Yıl)
+* Entity Framework (5 Yıl)
+* MSSQL (6 Yıl)
+* Repository Pattern (5 Yıl)
+* Katmanlı Mimari (5 Yıl)
+* Code First (5 Yıl)
+
